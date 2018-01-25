@@ -10,13 +10,13 @@
      </div>
  </body>
  </html>
- <script src="amazon-connect-v1.2.0-2-g5fc44af.js"></script>
+ <script src="amazon-connect-v1.2.0.js"></script>
  <script type="text/javascript">
  //replace with the CCP URL for your Amazon Connect instance
- var ccpUrl = "your_CCP_Url";
+ var ccpUrl = "https://coach-net.awsapps.com/connect/ccp#/";
 
  connect.core.initCCP(containerDiv, {
-    ccpUrl: "https://coach-net.awsapps.com/connect/ccp#/",
+    ccpUrl: ccpUrl,
     loginPopup: true,
     softphone: {
     allowFramedSoftphone: true
