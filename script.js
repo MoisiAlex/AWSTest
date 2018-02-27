@@ -31,6 +31,35 @@
         contact.onEnded(handleContactEnded);
     }
 
+
+
+
+    function logMsgToScreen(msg) {
+        logMsgs.innerHTML = '<div>' + new Date().toLocaleTimeString() + ' ' + msg + '</div>' + logMsgs.innerHTML;
+    }
+
+
+
+    function logInfoMsg(msg) {
+        connect.getLog().info(msg);
+        logMsgToScreen(msg);
+    }
+
+/*
+
+    function logInfoEvent(eventMsg) {
+        connect.getLog().info(eventMsg);
+        logEventToScreen(eventMsg);
+    }
+
+
+    function logEventToScreen(msg) {
+        eventMsgs.innerHTML = '<div>' + new Date().toLocaleTimeString() + ' ' + msg + '</div>' + eventMsgs.innerHTML;
+    }
+
+*/
+
+/*
     function handleContactIncoming(contact) {
         if (contact) {
             logInfoEvent("[contact.onIncoming] Contact is incoming. Contact state is " + contact.getStatus().type);
@@ -63,6 +92,10 @@
         }
     }
 
+*/
+
+
+/*
     function subscribeToAgentEvents(agent) {
         window.myCPP.agent = agent;
         agentGreetingDiv.innerHTML = '<h3>Hi ' + agent.getName() + '!</h3>';
@@ -95,23 +128,8 @@
         displayAgentStatus(agent.getStatus().name);
     }
 
-    function logMsgToScreen(msg) {
-        logMsgs.innerHTML = '<div>' + new Date().toLocaleTimeString() + ' ' + msg + '</div>' + logMsgs.innerHTML;
-    }
 
-    function logEventToScreen(msg) {
-        eventMsgs.innerHTML = '<div>' + new Date().toLocaleTimeString() + ' ' + msg + '</div>' + eventMsgs.innerHTML;
-    }
 
-    function logInfoMsg(msg) {
-        connect.getLog().info(msg);
-        logMsgToScreen(msg);
-    }
-
-    function logInfoEvent(eventMsg) {
-        connect.getLog().info(eventMsg);
-        logEventToScreen(eventMsg);
-    }
 
     function displayAgentStatus(status) {
         agentStatusDiv.innerHTML = 'Status: <span style="font-weight: bold">' + status + '</span>';
@@ -167,3 +185,5 @@
             }
         });
     }
+    
+    */
