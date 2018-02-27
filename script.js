@@ -27,6 +27,8 @@
         
         
         logInfoMsg("Contact attributes are " + JSON.stringify(contact.getAttributes()));
+     
+             updateContactAttribute(JSON.stringify(contact.getAttributes()));
         contact.onIncoming(handleContactIncoming);
         contact.onAccepted(handleContactAccepted);
         contact.onConnected(handleContactConnected);
