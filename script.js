@@ -36,7 +36,7 @@
     }
 
     function updateContactAttribute(msg){
-        let contactAttribute = msg[1]['value'];   
+        let contactAttribute = msg['Language']['value'];   
         
         document.getElementById('contactID').value=contactAttribute;
     }
