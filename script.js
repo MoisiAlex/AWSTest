@@ -29,22 +29,21 @@
         
         logInfoMsg("Contact attributes are " + JSON.stringify(contact.getAttributes()));
         
-        updateContactAttribute(window.myCPP.contact.getAttributes());
+        updateContactAttribute(contact.getAttributes());
         
-        contact.onIncoming(handleContactIncoming);
-        contact.onAccepted(handleContactAccepted);
-        contact.onConnected(handleContactConnected);
-        contact.onEnded(handleContactEnded);
+        contact.onIncoming(clearContactAttribute);
+
     }
 
     function updateContactAttribute(msg){
         
-        var table = document.getElementById("attributesTable");
+      
 
+        const tableRef = document.getElementById('attributesTable').getElementsByTagName('tbody')[0];
         
         for (var key in msg) {
             if (msg.hasOwnProperty(key)) {
-                        var row = table.insertRow(1);
+                        var row = table.insertRow(tableRef.rows.length);
                         var cell1 = row.insertCell(0);
                         var cell2 = row.insertCell(1);
                         cell1.innerHTML = key;
@@ -52,9 +51,11 @@
             }
         }
         
-        let contactAttribute = msg[1]['value'];   
-        
-        document.getElementById('contactID').value=contactAttribute;
+    }
+
+
+    function clearContactAttribute(){
+        document.getElementById('attributesTable').getElementsByTagName('tbody')[0].innerHTML = '';
     }
 
 
