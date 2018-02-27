@@ -26,9 +26,11 @@
         logInfoMsg("Contact is from queue " + contact.getQueue().name);
         
         
+        
         logInfoMsg("Contact attributes are " + JSON.stringify(contact.getAttributes()));
-     
-             updateContactAttribute(contact.getAttributes());
+        
+        updateContactAttribute(contact.getAttributes());
+        
         contact.onIncoming(handleContactIncoming);
         contact.onAccepted(handleContactAccepted);
         contact.onConnected(handleContactConnected);
@@ -36,7 +38,21 @@
     }
 
     function updateContactAttribute(msg){
-        let contactAttribute = msg['Language']['value'];   
+        
+        var table = document.getElementById("attributesTable");
+
+        
+        for (var key in msg) {
+            if (msg.hasOwnProperty(key)) {
+                        var row = table.insertRow(1);
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        cell1.innerHTML = key;
+                        cell2.innerHTML = msg[key];
+            }
+        }
+        
+        let contactAttribute = msg[1]['value'];   
         
         document.getElementById('contactID').value=contactAttribute;
     }
