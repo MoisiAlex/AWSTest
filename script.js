@@ -29,7 +29,7 @@
         
         logInfoMsg("Contact attributes are " + JSON.stringify(contact.getAttributes()));
         
-        updateContactAttribute(contact.getAttributes());
+        updateContactAttribute(window.myCPP.contact.getAttributes());
         
         contact.onIncoming(clearContactAttribute);
 
@@ -43,7 +43,7 @@
         
         for (var key in msg) {
             if (msg.hasOwnProperty(key)) {
-                        var row = table.insertRow(tableRef.rows.length);
+                        var row = tableRef.insertRow(tableRef.rows.length);
                         var cell1 = row.insertCell(0);
                         var cell2 = row.insertCell(1);
                         cell1.innerHTML = key;
