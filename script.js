@@ -29,7 +29,7 @@
         
         logInfoMsg("Contact attributes are " + JSON.stringify(contact.getAttributes()));
         
-        updateContactAttribute(contact.getAttributes());
+        updateContactAttribute(window.myCPP.contact.getAttributes());
         
         contact.onIncoming(handleContactIncoming);
         contact.onAccepted(handleContactAccepted);
@@ -48,7 +48,7 @@
                         var cell1 = row.insertCell(0);
                         var cell2 = row.insertCell(1);
                         cell1.innerHTML = key;
-                        cell2.innerHTML = msg[key];
+                        cell2.innerHTML = msg[key]['value'];
             }
         }
         
