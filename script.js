@@ -34,7 +34,7 @@
     }
 
     function updateContactAttribute(msg){
-        let contactAttribute = msg.[1].value;   
+        let contactAttribute = msg[1]['value'];   
         
         document.getElementById('contactID').value=contactAttribute;
     }
