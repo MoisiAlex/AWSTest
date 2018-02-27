@@ -1,4 +1,4 @@
-    window.myCPP = window.myCPP || {};
+ window.myCPP = window.myCPP || {};
 
     //replace with the CCP URL for your Amazon Connect instance
     var ccpUrl = "https://demoinstance.awsapps.com/connect/ccp";
@@ -12,7 +12,7 @@
     });
 
     connect.contact(subscribeToContactEvents);
-    connect.agent(subscribeToAgentEvents);
+    
 
     function subscribeToContactEvents(contact) {
         window.myCPP.contact = contact;
