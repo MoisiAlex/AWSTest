@@ -31,7 +31,7 @@
         
         updateContactAttribute(window.myCPP.contact.getAttributes());
         
-        contact.onIncoming(clearContactAttribute());
+        contact.onIncoming(function() {document.getElementById('attributesTable').getElementsByTagName('tbody')[0].innerHTML = '';});
 
     }
 
@@ -55,7 +55,7 @@
 
 
     function clearContactAttribute(){
-        document.getElementById('attributesTable').getElementsByTagName('tbody')[0].innerHTML = '';
+        
     }
 
 
