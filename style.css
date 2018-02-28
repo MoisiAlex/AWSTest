@@ -1,0 +1,49 @@
+body {
+    font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.flex-container {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    max-width: 750px;
+}
+
+.flex-container img{
+    height:30px;
+    width:auto;
+    margin: 5px;
+}
+
+
+.grid-container{
+   display: grid; 
+   grid-template-columns: 350px 400px;
+   grid-template-rows: 465px 465px;
+}
+
+.ccp {
+    width: 320px; 
+    min-width: 200px; 
+    height: 465px; 
+    min-height: 400px;
+}
+
+.contactAttributes{
+    margin:0;
+    padding:0;
+    width: 350px; 
+    min-width: 200px; 
+    height: 465px; 
+    min-height: 400px;
+    
+}
+
+.logMsgs {
+    height: 465px; 
+    overflow: auto;
+}

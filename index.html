@@ -1,34 +1,29 @@
 ﻿<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    </head>
 
     <body>
-    <div id="topDiv" style="width: 700px; min-width: 700px; margin-left: 200px;">
-        <div id="myApp">
-            <h1>Amazon Connect Streams API example</h1>
-        
+   
+        <div class="flex-container">
+            <img src="amazon-connect-logo-DA548F7E3F-seeklogo.com.png">
+            <h1>Amazon Connect CCP </h1>
         </div>
-    </div>
-    <div id="gridDiv" style="display: grid; grid-template-columns: 350px 400px 400px">
-        <div id="containerDiv" style="width: 320px; min-width: 200px; height: 465px; min-height: 400px; ">
+ 
+    <div id="gridDiv" class="grid-container">
+        <div id="containerDiv" class="ccp" >
             <!--Amazon CCP will go here-->
         </div>
-        <div id="logMsgsContainer">
-            <h2>Log Messages</h2>
-            <div id="logMsgs" style="height: 465px; overflow: auto;">
-                <!-- log messages will go here -->
-            </div>
-        </div>
+
         
-        <div>
-        <fieldset>
+      
+        <fieldset class ="contactAttributes">
             <legend>Contact Details</legend>
-            
-             <!---   <div>
-                  <label for="phoneNumber">Phone Number</label>
-                  <input name="phoneNumber" id="phoneNumber" placeholder="+15551112222" readonly="" type="tel">
-               </div>
-            
-            --->
+
             
             <table id="attributesTable" style="width:100%">
                 <thead>
@@ -45,8 +40,15 @@
             
  
         </fieldset>
-        </div>
+     
         
+        
+        <div id="logMsgsContainer">
+            <h2>Log Messages</h2>
+            <div id="logMsgs" class="logMsgs" >
+                <!-- log messages will go here -->
+            </div>
+        </div>
  
     </div>
 </body>
