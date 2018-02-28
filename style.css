@@ -11,12 +11,17 @@ h1 {
     justify-content:center;
     align-items: center;
     max-width: 750px;
+ 
 }
 
 .flex-container img{
     height:30px;
     width:auto;
     margin: 5px;
+}
+
+.flex-container th{
+    flex:1;
 }
 
 
@@ -41,6 +46,11 @@ h1 {
     height: 465px; 
     min-height: 400px;
     
+}
+
+.attributesTable {
+    table-layout: fixed;
+    width:100%;
 }
 
 .logMsgs {
