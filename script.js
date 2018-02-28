@@ -1,6 +1,6 @@
  window.myCPP = window.myCPP || {};
 
-    //replace with the CCP URL for your Amazon Connect instance
+    //replace with the CCP URL for the current Amazon Connect instance
     var ccpUrl = "https://demoinstance.awsapps.com/connect/ccp";
 
     connect.core.initCCP(containerDiv, {
@@ -11,12 +11,11 @@
         }
     });
 
-    connect.contact(subscribeToContactEvents);
-    
+    connect.contact(subscribeToContactEvents);  
 
     function subscribeToContactEvents(contact) {
         window.myCPP.contact = contact;
-        logInfoMsg("Subscribing to events for contact");
+        logInfoMsg("New contact offered. Subscribing to future events for contact");
         if (contact.getActiveInitialConnection()
             && contact.getActiveInitialConnection().getEndpoint()) {
             logInfoMsg("New contact is from " + contact.getActiveInitialConnection().getEndpoint().phoneNumber);
@@ -64,9 +63,8 @@
 
 
     function logMsgToScreen(msg) {
-        logMsgs.innerHTML = '<div>' + new Date().toLocaleTimeString() + ' ' + msg + '</div>' + logMsgs.innerHTML;
+        logMsgs.innerHTML =  new Date().toLocaleTimeString() + ' : ' + msg + '<br>' + logMsgs.innerHTML;
     }
-
 
 
     function logInfoMsg(msg) {
@@ -75,7 +73,7 @@
     }
 
 
-// Log Messages display
+// LogMessages display controls
 
 const showLogsBtn = document.getElementById('showAttributes');
 const showLogsDiv = document.getElementById("hiddenAttributes");
