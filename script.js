@@ -31,7 +31,7 @@
         
         updateContactAttribute(window.myCPP.contact.getAttributes());
         
-        contact.onIncoming(clearContactAttribute);
+        contact.onIncoming(clearContactAttribute());
 
     }
 
