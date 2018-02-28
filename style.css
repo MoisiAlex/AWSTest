@@ -1,5 +1,7 @@
 body {
     font: 100% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+    color: #666;
+    background: #eee;
 }
 
 h1 {
@@ -29,6 +31,10 @@ h1 {
    display: grid; 
    grid-template-columns: 350px 400px;
    grid-template-rows: 465px 465px;
+   border: 1px solid #cbcbcb;
+   background-color: #FFF;
+   width: 705px;
+   padding: 10px;
 }
 
 .ccp {
@@ -48,12 +54,37 @@ h1 {
     
 }
 
+.contactAttributes legend {
+    padding: 7px 10px;
+    font-weight: bold;
+    color: #000;
+    border: 1px solid #eee;
+    -webkit-border-radius: 5px;
+    
+}
+
 .attributesTable {
     table-layout: fixed;
     width:100%;
 }
 
+
+input{
+    width: 220px;
+    padding: 5px;
+    color: #666;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    font: 1em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+    border-radius: 5px;
+    vertical-align: top;
+    -webkit-transition: all 0.25s ease-in-out;
+    -webkit-box-shadow: 0 0 5px rgba(81, 203, 238, 0);
+}
+
 .logMsgs {
     height: 465px; 
     overflow: auto;
+    margin:10px;
 }

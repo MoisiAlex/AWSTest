@@ -42,14 +42,23 @@
         </fieldset>
      
         
-        
-        <div id="logMsgsContainer">
-            <h2>Log Messages</h2>
-            <div id="logMsgs" class="logMsgs" >
-                <!-- log messages will go here -->
-            </div>
-        </div>
+        <div class="logMsgs">
+               <div id="hiddenAttributes">
+                  <input type="button" id="showAttributes" value="Show Log Messages">
+               </div>
+               <div id="visibleAttributes" style="display:none;">
+                  <input type="button" id="hideAttributes" value="Hide Log Messages">
+                  
+            
+                <div id="logMsgsContainer">
+                    <div id="logMsgs">
+                        <!-- log messages will go here -->
+                    </div>
+                </div>
+            </div>  
  
+    </div>
+        
     </div>
 </body>
     

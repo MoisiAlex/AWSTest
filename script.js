@@ -74,3 +74,24 @@
         logMsgToScreen(msg);
     }
 
+
+// Log Messages display
+
+const showLogsBtn = document.getElementById('showAttributes');
+const showLogsDiv = document.getElementById("hiddenAttributes");
+const hideLogsBtn = document.getElementById('hideAttributes');
+const hideLogsDiv = document.getElementById("visibleAttributes");
+
+
+showLogsBtn.addEventListener('click',function(){
+    showLogsDiv.style.display = showLogsDiv.style.display === 'none' ? '' : 'none';
+    hideLogsDiv.style.display = hideLogsDiv.style.display === 'none' ? '' : 'none';
+});
+
+hideLogsBtn.addEventListener('click',function(){
+    showLogsDiv.style.display = showLogsDiv.style.display === 'none' ? '' : 'none';
+    hideLogsDiv.style.display = hideLogsDiv.style.display === 'none' ? '' : 'none';
+});
+
+
+
