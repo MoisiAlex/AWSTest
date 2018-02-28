@@ -68,6 +68,10 @@ h1 {
     width:100%;
 }
 
+tbody tr td{
+    padding-left: 25px;
+}
+
 
 input{
     width: 220px;
