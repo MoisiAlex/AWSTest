@@ -1,7 +1,7 @@
  window.myCPP = window.myCPP || {};
 
     //replace with the CCP URL for the current Amazon Connect instance
-    var ccpUrl = "https://demoinstance.awsapps.com/connect/ccp";
+    var ccpUrl = "https://demoinstance.awsapps.com/connect/ccp#/";
 
     connect.core.initCCP(containerDiv, {
         ccpUrl: ccpUrl,        
