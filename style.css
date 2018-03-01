@@ -19,7 +19,7 @@ body {
 
 .grid-container{
     display: grid;
-    grid-template-columns: 350px 350px;
+    grid-template-columns: 210px 350px;
     grid-template-rows: 465px 465px;
     border: 1px solid #cbcbcb;
     background-color: #FFF;
@@ -39,8 +39,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);
     -webkit-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);
-    -moz-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);
-    
+    -moz-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1); 
 }
 
 .ccp {
@@ -48,7 +47,6 @@ body {
     min-width: 200px; 
     height: 465px; 
     min-height: 400px;
-
 }
 
 .contactAttributes{
@@ -99,7 +97,8 @@ input{
 }
 
 .logMsgsContainer{
- max-height:365px;
- overflow: auto;
+    max-height:365px;
+    max-width: 665px;
+    overflow: auto;
     
 }
