@@ -1,14 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
+<head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">    
         <link rel="stylesheet" type="text/css" href="style.css">
-        
-    </head>
+</head>
 
-    <body>
-   
+<body>
         <div class="flex-container">
             <img src="amazon-connect-logo-DA548F7E3F-seeklogo.com.png">
             <h1>Amazon Connect CCP </h1>
@@ -18,13 +16,9 @@
         <div id="containerDiv" class="ccp" >
             <!--Amazon CCP will go here-->
         </div>
-
-        
       
         <fieldset class ="contactAttributes border">
-            <legend class="border">Contact Details</legend>
-
-            
+            <legend class="border">Contact Details</legend>            
             <table id="attributesTable" class="attributesTable">
                 <thead>
                     <tr>
@@ -34,7 +28,7 @@
                 </thead>
               <tbody>
                     <tr><td></td><td></td></tr>
-                  <!-- Contact attributes will be added here-->
+                  <!-- Contact attributes will go here-->
               </tbody>
 
             </table>
@@ -43,33 +37,28 @@
         </fieldset>
      
         
-        <fieldset class="logMsgs border">
+        <fieldset class="logMessages border">
             <legend class= "border">Log Messages</legend>
+                <!-- Toggle log messages display -->
                <div id="hiddenAttributes">
                   <input type="button" id="showAttributes" value="Show Log Messages">
                </div>
                <div id="visibleAttributes" style="display:none;">
                   <input type="button" id="hideAttributes" value="Hide Log Messages">
-                  
             
                 <div class="logMsgsContainer">
                     <div id="logMsgs">
-                        <!-- log messages will go here -->
+                        <!-- Log messages will go here -->
                     </div>
                 </div>
             </div>  
- 
-    </fieldset>
-        
+        </fieldset>
     </div>
-</body>
-    
+</body> 
 </html>
 
 
 
 
 <script src="amazon-connect-v1.2.0-2-g5fc44af.js"></script>
-<script src="script.js">
-   
-</script>
+<script src="script.js"></script>

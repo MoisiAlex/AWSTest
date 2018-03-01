@@ -12,34 +12,27 @@
     });
 
     connect.contact(subscribeToContactEvents);  
+    
 
     function subscribeToContactEvents(contact) {
         window.myCPP.contact = contact;
-        logInfoMsg("New contact offered. Subscribing to future events for contact");
+        logInfoMsg("New contact offered. Subscribing to events for contact");
         if (contact.getActiveInitialConnection()
             && contact.getActiveInitialConnection().getEndpoint()) {
             logInfoMsg("New contact is from " + contact.getActiveInitialConnection().getEndpoint().phoneNumber);
         } else {
             logInfoMsg("This is an existing contact for this agent");
         }
-        logInfoMsg("Contact is from queue " + contact.getQueue().name);
-        
-        
-        
+        logInfoMsg("Contact is from queue " + contact.getQueue().name);    
+        logInfoMsg("ContactID is " + contact.getContactId());   
         logInfoMsg("Contact attributes are " + JSON.stringify(contact.getAttributes()));
         
-        updateContactAttribute(window.myCPP.contact.getAttributes());
-        
+        updateContactAttribute(contact.getAttributes());    
         contact.onEnded(clearContactAttribute);
-
     }
 
     function updateContactAttribute(msg){
-        
-      
-
-        const tableRef = document.getElementById('attributesTable').getElementsByTagName('tbody')[0];
-        
+        var tableRef = document.getElementById('attributesTable').getElementsByTagName('tbody')[0];      
         for (var key in msg) {
             if (msg.hasOwnProperty(key)) {
                         var row = tableRef.insertRow(tableRef.rows.length);
@@ -55,10 +48,8 @@
 
     function clearContactAttribute(){
         var old_tbody= document.getElementById('attributesTable').getElementsByTagName('tbody')[0];
-        var new_tbody = document.createElement('tbody');
-        
-        old_tbody.parentNode.replaceChild(new_tbody, old_tbody)
-        
+        var new_tbody = document.createElement('tbody');    
+        old_tbody.parentNode.replaceChild(new_tbody, old_tbody);     
     }
 
 
@@ -73,23 +64,20 @@
     }
 
 
-// LogMessages display controls
+// LogMessages section display controls
 
-const showLogsBtn = document.getElementById('showAttributes');
-const showLogsDiv = document.getElementById("hiddenAttributes");
-const hideLogsBtn = document.getElementById('hideAttributes');
-const hideLogsDiv = document.getElementById("visibleAttributes");
-
-
-showLogsBtn.addEventListener('click',function(){
-    showLogsDiv.style.display = showLogsDiv.style.display === 'none' ? '' : 'none';
-    hideLogsDiv.style.display = hideLogsDiv.style.display === 'none' ? '' : 'none';
-});
-
-hideLogsBtn.addEventListener('click',function(){
-    showLogsDiv.style.display = showLogsDiv.style.display === 'none' ? '' : 'none';
-    hideLogsDiv.style.display = hideLogsDiv.style.display === 'none' ? '' : 'none';
-});
+var showLogsBtn = document.getElementById('showAttributes');
+var showLogsDiv = document.getElementById('hiddenAttributes');
+var hideLogsBtn = document.getElementById('hideAttributes');
+var hideLogsDiv = document.getElementById('visibleAttributes');
 
 
+showLogsBtn.addEventListener('click',replaceDisplay);
+
+hideLogsBtn.addEventListener('click',replaceDisplay);
+
+    function replaceDisplay(){
+            showLogsDiv.style.display = showLogsDiv.style.display === 'none' ? '' : 'none';
+            hideLogsDiv.style.display = hideLogsDiv.style.display === 'none' ? '' : 'none';
+    }
 
