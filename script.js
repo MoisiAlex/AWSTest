@@ -40,6 +40,7 @@
          var cell2 = row.insertCell(1);
          var cell1 = "Queue Name";
          var cell2 = msg;
+        console.log(msg);
         
     }
 
