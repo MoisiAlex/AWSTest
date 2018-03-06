@@ -38,9 +38,9 @@
          var row = tableRef.insertRow(tableRef.rows.length);
          var cell1 = row.insertCell(0);
          var cell2 = row.insertCell(1);
-         var cell1 = "Queue Name";
-         var cell2 = msg;
-        console.log(msg);
+         cell1.innerHTML  = "Queue Name";
+         cell2.innerHTML = msg;
+        
         
     }
 
