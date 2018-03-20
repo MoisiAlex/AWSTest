@@ -37,7 +37,8 @@
          var tableRef = document.getElementById('attributesTable').getElementsByTagName('tbody')[0]; 
          var row = tableRef.insertRow(tableRef.rows.length);
          var cell1 = row.insertCell(0);
-         var cell2 = row.insertCell(1);
+         var row2 = tableRef.insertRow(tableRef.rows.length);
+         var cell2 = row2.insertCell(0);
          cell1.innerHTML  = "Queue Name";
          cell2.innerHTML = msg;
         
@@ -51,7 +52,8 @@
             if (msg.hasOwnProperty(key)) {
                         var row = tableRef.insertRow(tableRef.rows.length);
                         var cell1 = row.insertCell(0);
-                        var cell2 = row.insertCell(1);
+                        var row2 = tableRef.insertRow(tableRef.rows.length);
+                        var cell2 = row2.insertCell(0);
                         cell1.innerHTML = key;
                         cell2.innerHTML = msg[key]['value'];
             }
