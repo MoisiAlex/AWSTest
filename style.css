@@ -50,9 +50,9 @@ h1 {
 
 /*--------iFrame Container default w:350 h:465-----------*/
 .ccp {
-    width: 200px; 
+    width: 320px; 
     min-width: 200px; 
-    height: 400px; 
+    height: 465px; 
     min-height: 400px;
 }
 
