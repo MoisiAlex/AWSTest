@@ -58,7 +58,13 @@ legend {
     margin-bottom: 10px;
 }
 
+#attributesTable{
+    padding:5px;
+}
 
+#attributesTable *{
+    margin-top:5px;
+}
 
 input{
     width: 220px;
