@@ -55,7 +55,7 @@
                         var cell2 =  document.createElement('div');
                         tableRef.appendChild(cell1);
                         tableRef.appendChild(cell2);
-                        cell1.innerHTML =  key;
+                        cell1.innerHTML =  "<strong>"+key"</strong>:";
                         cell2.innerHTML = msg[key]['value'];
 
             }
