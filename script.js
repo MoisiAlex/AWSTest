@@ -37,10 +37,11 @@
          var tableRef = document.getElementById('attributesTable');
          var cell1 =  document.createElement('div');
          var cell2 =  document.createElement('div');
-         tableRef.appendChild(cell1);
-         tableRef.appendChild(cell2);
+ 
          cell1.innerHTML  = "<strong> Queue Name: </strong>";
          cell2.innerHTML = msg;
+                tableRef.appendChild(cell1);
+         tableRef.appendChild(cell2);
         
         
     }
@@ -50,13 +51,13 @@
         var tableRef = document.getElementById('attributesTable').getElementsByTagName('tbody')[0];      
         for (var key in msg) {
             if (msg.hasOwnProperty(key)) {
-                        
                         var cell1 =  document.createElement('div');
                         var cell2 =  document.createElement('div');
-                        tableRef.appendChild(cell1);
-                        tableRef.appendChild(cell2);
-                        cell1.innerHTML = "<strong>"+ key+ "/<strong> :";
+
+                        cell1.innerHTML =  key;
                         cell2.innerHTML = msg[key]['value'];
+                                        tableRef.appendChild(cell1);
+                        tableRef.appendChild(cell2);
             }
         }
         
