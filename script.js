@@ -34,26 +34,30 @@
     }
 
     function updateQueue(msg){
-         var tableRef = document.getElementById('attributesTable').getElementsByTagName('tbody')[0]; 
-         var row = tableRef.insertRow(tableRef.rows.length);
-         var cell1 = row.insertCell(0);
-         var cell2 = row.insertCell(1);
-         cell1.innerHTML  = "Queue Name";
+         var tableRef = document.getElementById('attributesTable');
+         var cell1 =  document.createElement('div');
+         var cell2 =  document.createElement('div');
+         tableRef.appendChild(cell1);
+         tableRef.appendChild(cell2);
+         cell1.innerHTML  = "<strong> Queue Name: </strong>";
          cell2.innerHTML = msg;
+
         
         
     }
 
 
     function updateContactAttribute(msg){
-        var tableRef = document.getElementById('attributesTable').getElementsByTagName('tbody')[0];      
+        var tableRef = document.getElementById('attributesTable');      
         for (var key in msg) {
             if (msg.hasOwnProperty(key)) {
-                        var row = tableRef.insertRow(tableRef.rows.length);
-                        var cell1 = row.insertCell(0);
-                        var cell2 = row.insertCell(1);
-                        cell1.innerHTML = key;
+                        var cell1 =  document.createElement('div');
+                        var cell2 =  document.createElement('div');
+                        tableRef.appendChild(cell1);
+                        tableRef.appendChild(cell2);
+                        cell1.innerHTML =  key;
                         cell2.innerHTML = msg[key]['value'];
+
             }
         }
         
@@ -61,9 +65,8 @@
 
 
     function clearContactAttribute(){
-        var old_tbody= document.getElementById('attributesTable').getElementsByTagName('tbody')[0];
-        var new_tbody = document.createElement('tbody');    
-        old_tbody.parentNode.replaceChild(new_tbody, old_tbody);     
+        var old_tbody= document.getElementById('attributesTable');
+        old_tbody.innerHTML= "<!-- Contact attributes will go here-->";
     }
 
 
