@@ -4,28 +4,10 @@ body {
     background: #eee;
 }
 
-.flex-container {
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    max-width: 705px;
-    margin:0;
-}
-
-h1 {
-   margin:0;
-   padding:0;
-}
-.flex-container img{
-    height:30px;
-    margin: 5px;
-}
-
-
 .grid-container{
     display: grid;
-    grid-template-columns: 220px 400px; /* 350,350 / 465 465*/
-    grid-template-rows: 400px 400px;
+    grid-template-columns: 350px 300px;
+    grid-template-rows: 465px 465px;
     border: 1px solid #cbcbcb;
     background-color: #FFF;
     width: 625px;
@@ -59,7 +41,7 @@ h1 {
 .contactAttributes{
     margin:0;
     padding:0;
-    width: 400px; 
+    width: 270px; 
     min-width: 200px; 
     min-height: 400px;
    
