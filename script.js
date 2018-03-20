@@ -34,12 +34,12 @@
     }
 
     function updateQueue(msg){
-         var tableRef = document.getElementById('attributesTable').getElementsByTagName('tbody')[0]; 
-         var row = tableRef.insertRow(tableRef.rows.length);
-         var cell1 = row.insertCell(0);
-         var row2 = tableRef.insertRow(tableRef.rows.length);
-         var cell2 = row2.insertCell(0);
-         cell1.innerHTML  = "Queue Name";
+         var tableRef = document.getElementById('attributesTable');
+         var cell1 =  document.createElement('div');
+         var cell2 =  document.createElement('div');
+         tableRef.appendChild(cell1);
+         tableRef.appendChild(cell2);
+         cell1.innerHTML  = "<strong> Queue Name: </strong>";
          cell2.innerHTML = msg;
         
         
@@ -50,11 +50,12 @@
         var tableRef = document.getElementById('attributesTable').getElementsByTagName('tbody')[0];      
         for (var key in msg) {
             if (msg.hasOwnProperty(key)) {
-                        var row = tableRef.insertRow(tableRef.rows.length);
-                        var cell1 = row.insertCell(0);
-                        var row2 = tableRef.insertRow(tableRef.rows.length);
-                        var cell2 = row2.insertCell(0);
-                        cell1.innerHTML = key;
+                        
+                        var cell1 =  document.createElement('div');
+                        var cell2 =  document.createElement('div');
+                        tableRef.appendChild(cell1);
+                        tableRef.appendChild(cell2);
+                        cell1.innerHTML = "<strong>"+ key+ "/<strong> :";
                         cell2.innerHTML = msg[key]['value'];
             }
         }
