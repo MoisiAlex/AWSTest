@@ -1,7 +1,7 @@
  window.myCPP = window.myCPP || {};
 
     //replace with the CCP URL for the current Amazon Connect instance
-    var ccpUrl = "https://demoinstance.awsapps.com/connect/ccp#/";
+    var ccpUrl = "https://coachnet.awsapps.com/connect/ccp#/";
 
     connect.core.initCCP(containerDiv, {
         ccpUrl: ccpUrl,        
@@ -42,8 +42,6 @@
          cell1.innerHTML  = "<strong> Queue Name: </strong>";
          cell2.innerHTML = msg;
 
-        
-        
     }
 
 
@@ -57,7 +55,6 @@
                         tableRef.appendChild(cell2);
                         cell1.innerHTML =  "<strong>"+key+"</strong>:";
                         cell2.innerHTML = msg[key]['value'];
-
             }
         }
         

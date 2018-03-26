@@ -15,8 +15,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);
     -webkit-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);
-    -moz-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);
-    
+    -moz-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);   
 }
 
 .border {
@@ -44,14 +43,12 @@ body {
     width: 190px;
     min-height: 400px;
     height: 467px;
-   
 }
 
 legend {
     padding: 7px;
     font-weight: bold;
-    margin:5px;
-
+    margin:5px
 }
 
 .queueTable{
@@ -91,8 +88,7 @@ input{
 .logMsgsContainer{
     max-height:365px;
     max-width: 665px;
-    overflow: auto;
-    
+    overflow: auto;   
 }
 
 .logMessages div{
