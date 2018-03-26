@@ -98,3 +98,10 @@ hideLogsBtn.addEventListener('click',replaceDisplay);
             hideLogsDiv.style.display = hideLogsDiv.style.display === 'none' ? '' : 'none';
     }
 
+
+function resizePage(){
+    var width = 600;
+    var height = 400;
+    window.resizeTo(width, height);
+    
+}
