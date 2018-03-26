@@ -99,9 +99,3 @@ hideLogsBtn.addEventListener('click',replaceDisplay);
     }
 
 
-function resizePage(){
-    var width = 600;
-    var height = 400;
-    window.resizeTo(width, height);
-    
-}
