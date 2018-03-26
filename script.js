@@ -106,3 +106,10 @@ window.onload= function() {
     var height = 400;
     window.resizeTo(width, height);  
 };
+
+function resizePage(){
+    var width = 600;
+    var height = 400;
+    window.resizeTo(width, height);
+    
+}
