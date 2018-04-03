@@ -57,7 +57,7 @@
         
         updateQueue(contact.getQueue().name);
         updateContactAttribute(contact.getAttributes());    
-       
+        clearContactAttribute();
         
         contact.onEnded(function (contact) {
             appendAmazonLog("contact.onEnded, inbound = " + contact.isInbound());
