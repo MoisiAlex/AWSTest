@@ -110,6 +110,10 @@ input{
 }
 
 
+#contactActionsDiv{
+    margin-top:150px;
+}
+
 .switch {
   position: relative;
   display: inline-block;
