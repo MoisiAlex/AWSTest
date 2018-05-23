@@ -47,6 +47,7 @@ body {
     min-width: 200px; 
     height: 465px; 
     min-height: 400px;
+    background-color: #FFF;
 }
 
 .contactAttributes{
