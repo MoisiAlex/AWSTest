@@ -119,7 +119,7 @@
 
 
     function checkStatus(){
-        if (agent.getStatus().name === "Available") {goOffline();}
+        if (window.myCPP.agent.getStatus().name === "Available") {goOffline();}
         else {
             goAvailable();
         }
