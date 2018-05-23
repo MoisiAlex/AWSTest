@@ -73,6 +73,7 @@
         agent.onRoutable(handleAgentRoutable);
         agent.onNotRoutable(handleAgentNotRoutable);
         agent.onOffline(handleAgentOffline);
+        goOffline();
     }
 
     function handleAgentRefresh(agent) {
@@ -115,13 +116,18 @@
 
     function displayAgentStatus(status) {
         agentStatusDiv.innerHTML = 'Status: <span style="font-weight: bold">' + status + '</span>';
+  
     }
 
 
     function checkStatus(){
-        if (window.myCPP.agent.getStatus().name === "Available") {goOffline();}
+        if (window.myCPP.agent.getStatus().name === "Available") {
+            goOffline();
+            agentStatusToggle.innerHTML ='Go Available: ';
+        }
         else {
             goAvailable();
+            agentStatusToggle.innerHTML ='Go Offline: ';    
         }
         
     }
