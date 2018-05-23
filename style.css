@@ -4,18 +4,32 @@ body {
     background: #eee;
 }
 
+.flex-container {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    max-width: 705px;
+}
+
+.flex-container img{
+    height:30px;
+    margin: 5px;
+}
+
+
 .grid-container{
     display: grid;
-    grid-template-columns: 335px 200px;
+    grid-template-columns: 350px 350px;
     grid-template-rows: 465px 465px;
     border: 1px solid #cbcbcb;
     background-color: #FFF;
-    width: 525px;
+    width: 705px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);
     -webkit-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);
-    -moz-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);   
+    -moz-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1);
+    
 }
 
 .border {
@@ -28,8 +42,6 @@ body {
     -moz-box-shadow: 0 2px 5px rgba(50, 50, 50, 0.1); 
 }
 
-
-/*--------iFrame Container default w:350 h:465-----------*/
 .ccp {
     width: 320px; 
     min-width: 200px; 
@@ -40,28 +52,29 @@ body {
 .contactAttributes{
     margin:0;
     padding:0;
-    width: 190px;
+    width: 350px; 
+    min-width: 200px; 
+    height: 465px; 
     min-height: 400px;
-    height: 467px;
+   
 }
 
 legend {
     padding: 7px;
     font-weight: bold;
-    margin:5px
+    margin:5px;
+
 }
 
-.queueTable{
-    margin-bottom: 10px;
+.attributesTable {
+    table-layout: fixed;
+    width:100%;
 }
 
-#attributesTable{
-    padding:5px;
+tbody tr td{
+    padding-left: 25px;
 }
 
-#attributesTable *{
-    margin-top:5px;
-}
 
 input{
     width: 220px;
@@ -76,22 +89,70 @@ input{
 }
 
 .logMessages {
-    margin:0;
-    padding:0;
     grid-row: 2;
     grid-column:1 / 3;    
     overflow: hidden;
-    width: 525px;
-    margin-top:10px;
+    width: 665px;
+    margin:10px;
 }
 
 .logMsgsContainer{
     max-height:365px;
     max-width: 665px;
-    overflow: auto;   
+    overflow: auto;
+    
 }
 
-.logMessages div{
-    padding-left:10px;
+
+.agentStatus{
+        padding-right: 32px;
     
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
