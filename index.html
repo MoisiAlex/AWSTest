@@ -23,7 +23,7 @@
                 </div>
                 
                 
-                <div class="flex-container">
+                <div class="flex-container space">
                     <div id="agentStatusDiv" style="padding: 5px;">
                     </div>
     
@@ -45,11 +45,16 @@
 -->
             </div>
             <div id="contactActionsDiv">
-                <div id="answerDiv" style="border-style: solid; border-color: black; border-width: medium; padding: 10px; margin: 10px 60px 10px 60px">
+                <div id="answerDiv">
+                    
+                    <button class="button button1">
                     <span onclick="acceptContact()">Answer Incoming</span><br />
+                    </button>    
                 </div>
-                <div id="hangupDiv" style="border-style: solid; border-color: black; border-width: medium; padding: 10px; margin: 10px 60px 10px 60px">
+                <div id="hangupDiv">
+                    <button class="button button2">
                     <span onclick="disconnectContact()">Hang-Up</span><br />
+                    </button>     
                 </div>
             </div>
         </div>
