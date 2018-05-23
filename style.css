@@ -115,8 +115,12 @@ input{
 }
 
 
+.callDiv{
+    height:150px;
+}
+
 #contactActionsDiv{
-    margin-top: 150px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
