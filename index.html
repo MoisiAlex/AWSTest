@@ -15,23 +15,22 @@
         <div id="containerDiv" style="width: 320px; min-width: 200px; height: 465px; min-height: 400px; display: none;">
             <!--Amazon CCP is hiding in here-->
         </div>
-        <div id="customCCPDiv" style="width: 320px; min-width: 200px; height: 465px; min-height: 400px; border-style: dotted; border-color: gray; border-width: thick;">
+        <div id="customCCPDiv" class="ccp border">
             <!-- custom user experience goes here -->
             <div id="statusDiv">
                 <div id="agentGreetingDiv" style="padding: 5px;">
                     <!-- say hi to the agent -->
                 </div>
-                <div id="agentStatusDiv" style="padding: 5px;">
-                </div>
+                
                 
                 <div class="flex-container">
-                    
+                    <div id="agentStatusDiv" style="padding: 5px;">
+                    </div>
                     <div class="agentStatus" id="agentStatusToggle">
                         Go Available:
-                        
                     </div>    
                     <label class="switch">
-	
+	                   
                         <input type="checkbox">
                         <span onclick="checkStatus()" class="slider"></span>
                     </label>

@@ -1,4 +1,13 @@
- window.myCPP = window.myCPP || {};
+window.onload = function() {
+var checkboxes = document.getElementsByTagName('input');
+for (var i=0; i<checkboxes.length; i++)  {
+    if (checkboxes[i].type == 'checkbox')   {
+    checkboxes[i].checked = false;
+  }
+}
+}; 
+
+window.myCPP = window.myCPP || {};
 
     //replace with the CCP URL for your Amazon Connect instance
     var ccpUrl = "https://perficientdemo.awsapps.com/connect/ccp#/";
