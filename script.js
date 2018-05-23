@@ -1,10 +1,5 @@
 window.onload = function() {
-var checkboxes = document.getElementsByTagName('input');
-for (var i=0; i<checkboxes.length; i++)  {
-    if (checkboxes[i].type == 'checkbox')   {
-    checkboxes[i].checked = false;
-  }
-}
+checkStatus();
 }; 
 
 window.myCPP = window.myCPP || {};
@@ -82,12 +77,13 @@ window.myCPP = window.myCPP || {};
         agent.onRoutable(handleAgentRoutable);
         agent.onNotRoutable(handleAgentNotRoutable);
         agent.onOffline(handleAgentOffline);
-        goOffline();
+        
     }
 
     function handleAgentRefresh(agent) {
         logInfoEvent("[agent.onRefresh] Agent data refreshed. Agent status is " + agent.getStatus().name);
         displayAgentStatus(agent.getStatus().name);
+        checkStatus();
     }
 
     function handleAgentRoutable(agent) {
@@ -128,16 +124,30 @@ window.myCPP = window.myCPP || {};
   
     }
 
-
     function checkStatus(){
+        
+        var checkboxes = document.getElementById('statBox');
+    
+        if (window.myCPP.agent.getStatus().name === "Available") {
+          
+            checkboxes.checked = true;       
+        }
+        else {
+            
+            checkboxes.checked = false;
+        }
+        
+        
+        
+    }
+
+    function setStatus(){ 
         if (window.myCPP.agent.getStatus().name === "Available") {
             goOffline();
-            agentStatusToggle.innerHTML ='Go Available: ';
         }
         else {
             goAvailable();
-            agentStatusToggle.innerHTML ='Go Offline: ';    
-        }
+        }       
         
     }
 
