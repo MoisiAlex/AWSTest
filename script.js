@@ -1,6 +1,3 @@
-window.onload = function() {
-checkStatus();
-}; 
 
 window.myCPP = window.myCPP || {};
 
