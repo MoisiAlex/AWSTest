@@ -33,17 +33,19 @@ window.myCPP = window.myCPP || {};
     }
 
     function handleContactIncoming(contact) {
+    callDiv.innerHTML ='New call from: ' +  window.myCPP.contact.getActiveInitialConnection().getEndpoint().phoneNumber;
+        
         if (contact) {
             logInfoEvent("[contact.onIncoming] Contact is incoming. Contact state is " + contact.getStatus().type);
          
         } else {
             logInfoEvent("[contact.onIncoming] Contact is incoming. Null contact passed to event handler");
         }
-           callDiv.innerHTML ='New call from: ' +contact.getActiveInitialConnection().getEndpoint().phoneNumber;
+         
     }
 
     function handleContactAccepted(contact) {
-          callDiv.innerHTML ='New call from: ' +  window.myCPP.contact.getActiveInitialConnection().getEndpoint().phoneNumber;
+        
         if (contact) {
             logInfoEvent("[contact.onAccepted] Contact accepted by agent. Contact state is " + contact.getStatus().type);
         } else {
