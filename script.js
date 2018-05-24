@@ -35,6 +35,7 @@ window.myCPP = window.myCPP || {};
     function handleContactIncoming(contact) {
         if (contact) {
             logInfoEvent("[contact.onIncoming] Contact is incoming. Contact state is " + contact.getStatus().type);
+            callDiv.innerHTML ='New call from: ' +contact.getActiveInitialConnection().getEndpoint().phoneNumber;
         } else {
             logInfoEvent("[contact.onIncoming] Contact is incoming. Null contact passed to event handler");
         }
@@ -118,10 +119,7 @@ window.myCPP = window.myCPP || {};
 
     function displayAgentStatus(status) {
         if( status === "PendingBusy") {
-             window.myCPP.contact = contact;
-             agentStatusDiv.innerHTML = 'Status: <span style="font-weight: bold"> incoming call </span>';
-             callDiv.innerHTML ='New call from: ' +contact.getActiveInitialConnection().getEndpoint().phoneNumber;
-            
+        agentStatusDiv.innerHTML = 'Status: <span style="font-weight: bold"> incoming call </span>';          
         }
         else{
         agentStatusDiv.innerHTML = 'Status: <span style="font-weight: bold">' + status + '</span>';
