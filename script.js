@@ -43,6 +43,7 @@ window.myCPP = window.myCPP || {};
     }
 
     function handleContactAccepted(contact) {
+          callDiv.innerHTML ='New call from: ' +  window.myCPP.contact.getActiveInitialConnection().getEndpoint().phoneNumber;
         if (contact) {
             logInfoEvent("[contact.onAccepted] Contact accepted by agent. Contact state is " + contact.getStatus().type);
         } else {
